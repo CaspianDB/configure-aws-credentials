@@ -1,4 +1,5 @@
 const core = require('@actions/core');
+const { SharedConfigFile } = require('./index');
 
 /**
  * When the GitHub Actions job is done, clean up any environment variables that
@@ -13,6 +14,11 @@ const core = require('@actions/core');
 
 async function cleanup() {
   try {
+    const saveToProfile = core.getInput('save-to-profile', { required: false });
+    if (saveToProfile) {
+      const config = new SharedConfigFile(saveToProfile);
+      config.undo();
+    }
     // The GitHub Actions toolkit does not have an option to completely unset
     // environment variables, so we overwrite the current value with an empty
     // string. The AWS CLI and AWS SDKs will behave correctly: they treat an
