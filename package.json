@@ -1,6 +1,6 @@
 {
-  "name": "aws-actions-configure-aws-credentials",
-  "version": "1.7.0",
+  "name": "@caspiandb/configure-aws-credentials",
+  "version": "1.8.0",
   "description": "Configure AWS Credentials",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aws-actions/configure-aws-credentials.git"
+    "url": "git+https://github.com/caspiandb/configure-aws-credentials.git"
   },
   "keywords": [
     "AWS",
@@ -21,13 +21,14 @@
   "author": "AWS",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aws-actions/configure-aws-credentials/issues"
+    "url": "https://github.com/caspiandb/configure-aws-credentials/issues"
   },
-  "homepage": "https://github.com/aws-actions/configure-aws-credentials#readme",
+  "homepage": "https://github.com/caspiandb/configure-aws-credentials#readme",
   "dependencies": {
     "@actions/core": "^1.9.1",
     "aws-sdk": "^2.1219.0",
-    "axios": "^0.27.2"
+    "axios": "^0.27.2",
+    "ini": "^3.0.1"
   },
   "devDependencies": {
     "@zeit/ncc": "^0.22.3",
